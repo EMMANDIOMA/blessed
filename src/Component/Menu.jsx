@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({ duration: 3000, easing: "ease-in-out" });
@@ -9,36 +10,42 @@ const Menu = () => {
       name: "Roasted Chicken",
       price: "$15.99",
       description: "Golden, crispy, and tender.",
+      path: "/roasted",
     },
     {
       image: "/beef.jpg",
       name: "Beef Steak",
       price: "$22.99",
       description: "Juicy and perfectly seasoned.",
+      path: "/beef",
     },
     {
       image: "/smoothie.jpg",
       name: "Fruit Smoothie",
       price: "$7.99",
       description: "Refreshing blend of seasonal fruits.",
+      path: "/smothie",
     },
     {
       image: "/tigernut.jpg",
       name: "Tigernut Drink",
       price: "$5.99",
       description: "Nutritious and energizing beverage.",
+      path: "/tigernut",
     },
     {
       image: "/noddles.jpg",
       name: "Noddles",
       price: "$9.99",
       description: "Delicious and easy to prepare.",
+      path: "/noddles",
     },
     {
       image: "/snooker.jpg",
       name: "Snooker & Bar Menu",
       price: "$12.99",
       description: "Play games while you enjoy the menu.",
+      path: "/snooker",
     },
   ];
   return (
@@ -69,9 +76,12 @@ const Menu = () => {
                   </div>
                   <div className="flex text-xl font-medium py-4 justify-between">
                     <div className="pt-2 text-[#E5681B]">{menu.price}</div>
-                    <div className="border rounded-md py-2 px-3 text-white hover:bg-[#cf4e0b] bg-[#E5681B]">
+                    <Link
+                      to={menu.path}
+                      className="border rounded-md py-2 px-3 text-white hover:bg-[#cf4e0b] bg-[#E5681B]"
+                    >
                       View More
-                    </div>
+                    </Link>
                   </div>
                 </figcaption>
               </figure>
