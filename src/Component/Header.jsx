@@ -54,16 +54,16 @@ const Header = () => {
              sm:hidden overflow-hidden
             transition-all duration-300 ease-in-out
             ${Open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
-            bg-white/30 shadow-md  absolute top-full left-0 w-full
+            bg-white/20 shadow-md  absolute top-full left-0 w-full
           `}
         >
-          <nav className="flex flex-col shadow-amber-200 items-center gap-3 py-3">
+          <nav className="flex flex-col  shadow-amber-200 items-center gap-3 py-3">
             {Links.map((link, index) => (
               <Link
                 to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                 key={index}
                 onClick={() => setOpen(false)}
-                className="text-lg font-semibold text-[] hover:text-[#E5681B] transition-colors"
+                className="text-2xl font-bold  hover:text-black  text-[#E5681B] transition-colors"
               >
                 {link}
               </Link>
