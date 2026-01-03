@@ -1,6 +1,6 @@
 import React from "react";
 import { FiAlignJustify } from "react-icons/fi";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
@@ -10,23 +10,36 @@ const Header = () => {
   return (
     <>
       <header
-        className="flex justify-between px-2 sm:justify-around items-center bg-[#FFFAF6] h-20 sticky top-0 shadow-md z-50 
+        className="flex justify-between sm:justify-between items-center bg-[#FFFAF6] h-20 sticky top-0 shadow-md z-50 
         "
       >
         <div className="font-bold text-2xl text-transparent bg-clip-text bg-linear-to-r from-[#EF9965] to-[purple]">
           BLESSED C&C
         </div>
 
-        <div className="">
-          <nav className="text-black  hidden sm:gap-4 sm:flex">
+        <div className="flex-1 flex sm:pl-25 justify-center">
+          <nav className="text-black hidden sm:flex gap-4">
             {Links.map((link, index) => (
-              <a className="text-2xl font-bold" key={index}>
+              <Link
+                to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+                className="text-2xl font-semibold hover:text-[#E5681B] transition-colors"
+                key={index}
+              >
                 {link}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
-        <div className="sm:flex gap-10 hidden">
+
+        <div>
+          <button
+            onClick={() => setOpen(!Open)}
+            className="font-bold  sm:hidden text-3xl "
+          >
+            <FiAlignJustify />
+          </button>
+        </div>
+        <div className="sm:flex  gap-10 hidden">
           {Buttons.map((button, index) => (
             <button
               className="border bg-[#E5681B] px-4 py-2 rounded-lg text-white hover:bg-[#cf4e0b] transition-colors"
@@ -35,14 +48,6 @@ const Header = () => {
               {button}
             </button>
           ))}
-        </div>
-        <div>
-          <button
-            onClick={() => setOpen(!Open)}
-            className="font-bold  sm:hidden text-3xl "
-          >
-            <FiAlignJustify />
-          </button>
         </div>
         <div
           className={`
@@ -54,13 +59,14 @@ const Header = () => {
         >
           <nav className="flex flex-col shadow-amber-200 items-center gap-3 py-3">
             {Links.map((link, index) => (
-              <a
+              <Link
+                to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                 key={index}
                 onClick={() => setOpen(false)}
                 className="text-lg font-semibold text-[] hover:text-[#E5681B] transition-colors"
               >
                 {link}
-              </a>
+              </Link>
             ))}
             {Buttons.map((button, index) => (
               <button
