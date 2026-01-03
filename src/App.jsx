@@ -10,6 +10,8 @@ import Tigernut from "./MenuHomes/Tigernut.jsx";
 import Noddles from "./MenuHomes/Noddles.jsx";
 import Snooker from "./MenuHomes/Snooker.jsx";
 import Scroll from "./Component/Scroll.jsx";
+import About from "./Component/About.jsx";
+import Contact from "./Component/Contact.jsx";
 const App = () => {
   return (
     <>
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
           <Route path="menu" element={<Menu />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="roasted" element={<Roasted />} />
           <Route path="beef" element={<Beef />} />
           <Route path="smothie" element={<Smothie />} />
