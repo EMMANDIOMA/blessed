@@ -54,7 +54,7 @@ const Menu = () => {
               <figure className="bg-[white]   rounded-md h-full" key={index}>
                 <div className="">
                   <img
-                    className="pt-6 transition-transform duration-300 ease-in-out hover:scale-95  "
+                    className="pt-6 transition-transform duration-300 ease-in-out active:scale-95  "
                     src={menu.image}
                     alt={menu.name}
                   />
