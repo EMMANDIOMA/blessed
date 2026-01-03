@@ -9,9 +9,11 @@ import Smothie from "./MenuHomes/Smothie.jsx";
 import Tigernut from "./MenuHomes/Tigernut.jsx";
 import Noddles from "./MenuHomes/Noddles.jsx";
 import Snooker from "./MenuHomes/Snooker.jsx";
+import Scroll from "./Component/Scroll.jsx";
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
