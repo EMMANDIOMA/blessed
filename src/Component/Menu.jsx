@@ -1,5 +1,7 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({ duration: 3000, easing: "ease-in-out" });
 const Menu = () => {
   const Menu = [
     {
@@ -54,9 +56,10 @@ const Menu = () => {
               <figure className="bg-[white]   rounded-md h-full" key={index}>
                 <div className="">
                   <img
-                    className="pt-6 transition-transform duration-300 ease-in-out active:scale-95  "
+                    className="pt-6   "
                     src={menu.image}
                     alt={menu.name}
+                    data-aos="zoom-in"
                   />
                 </div>
                 <figcaption className="px-3 py-6">
