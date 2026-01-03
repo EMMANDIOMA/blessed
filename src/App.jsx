@@ -13,7 +13,7 @@ import Scroll from "./Component/Scroll.jsx";
 const App = () => {
   return (
     <>
-      <ScrollToTop />
+      <Scroll />
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
