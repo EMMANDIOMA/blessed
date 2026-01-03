@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -33,9 +34,12 @@ const Home = () => {
               <p className="text-lg md:text-2xl mb-6">
                 We deliver quality services
               </p>
-              <button className="px-8 py-3 bg-[#E5681B] rounded-full hover:bg-[#cf4e0b] transition-all shadow-md">
+              <Link
+                to="/menu"
+                className="px-8 py-3 bg-[#E5681B] rounded-full hover:bg-[#cf4e0b] transition-all shadow-md"
+              >
                 View Menu
-              </button>
+              </Link>
             </div>
           </div>
         </section>
