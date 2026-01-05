@@ -63,7 +63,7 @@ const Noddles = () => {
               <div className="flex  justify-between">
                 <div className="flex text-xl flex-col gap-1.5 text-[grey]">
                   <p>price</p>
-                  <p className="text-[#E46212] text-xl font-semibold">$9.99</p>
+                  <p className="text-[#E46212] text-xl font-semibold">2,500</p>
                 </div>
                 <div className="mt-7">
                   <div className="bg-[#E46212] text-white text-xl  border-[#F9D9C5] border h-fit px-6 text-semibold rounded-md">
