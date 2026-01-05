@@ -9,7 +9,7 @@ const Contact = () => {
   const icons = [
     {
       icon: <FaWhatsapp />,
-      path: "https://wa.me/07026908248",
+      path: "https://wa.me/+2349076264160",
       color: "text-[green]",
     },
     {
@@ -64,7 +64,7 @@ const Contact = () => {
               <p className="text-[#E46212] text-xl font-semibold">Contact</p>
             </div>
             <p className="text-justify text-xl font-light text-white">
-              Besides Ugwucheleku Okija 1 Transformer, <br /> Ihiala LGA,
+              Besides Ugwucheleku <br /> Okija 1 Transformer, <br /> Ihiala LGA,
               Anambra State
             </p>
             <div className="flex justify-center items-center gap-3">
